@@ -15,17 +15,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link
-          href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"
-          rel="stylesheet"
-        />
       </head>
       <GLobalState>
         <body className={inter.className}>
           <Nav />
         <RequiredAuth>
           <main>{children}</main>
-          <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
         </RequiredAuth>
         </body>
       </GLobalState>
