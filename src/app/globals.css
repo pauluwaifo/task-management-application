@@ -188,14 +188,14 @@ input[type="file"] {
 .m-h-sm {
   min-height: 12rem;
 }
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 654px) {
   .form-container {
-    width: 400px;
+    width: 300px;
     height: 580px;
     position: absolute;
     margin: -250px -250px;
     top: 44%;
-    left: 60%;
+    left: 78%;
     background-color: white !important;
     box-shadow: 12px 13px 10px 1000px rgba(0, 0, 0, 0.5);
     border-radius: 5px;
@@ -207,7 +207,7 @@ input[type="file"] {
   .form-container input,
   textarea,
   select {
-    width: 350px;
+    width: 250px;
     height: 48px;
     margin: 6px !important;
   }
