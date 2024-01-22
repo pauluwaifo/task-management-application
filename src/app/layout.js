@@ -1,5 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import GLobalState from "./context/globalState";
+import Nav from "./components/nav";
+import RequiredAuth from "./requiredAuth/requiredAuth"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +14,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"
+          rel="stylesheet"
+        />
+      </head>
+      <GLobalState>
+        <body className={inter.className}>
+          <Nav />
+        <RequiredAuth>
+          <main>{children}</main>
+          <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+        </RequiredAuth>
+        </body>
+      </GLobalState>
     </html>
   );
 }
