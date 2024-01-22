@@ -25,4 +25,4 @@
  **DESIGN CHOICE**
 --Clean and Simple Interface:
 	Purpose: I employed a clean and simple user interface to ensure ease of use a single user base.
-	Reasoning: A minimalist design reduces cognitive load and helps users navigate the platform effortlessly. This is crucial for a task management app where users 	engage in various activities like creating new task, editing task, and deleting task.
+	Reasoning: A minimalist design reduces cognitive load and helps users navigate the platform effortlessly. This is crucial for a task management app where users engage in various activities like creating new task, editing task, and deleting task.
