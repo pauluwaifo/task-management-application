@@ -6,6 +6,7 @@ import { Modal } from "flowbite";
 import AppContext from "../context/appContext";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import Script from "next/script";
 
 export default function Nav() {
   const [pendingNotification, setPendingNotification] = useState(false);
@@ -49,6 +50,7 @@ export default function Nav() {
   
   return (
     <>
+      <Script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js" />
       {url !== "/signin" && url !== "/signup" && isAuth ? (
         <>
           <nav className="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
