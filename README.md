@@ -18,6 +18,6 @@
 	git pull origin main (Pull Changes from the Remote Repository)
 
 **DEPENDENCIES USED**
---Firebase (to handle user authentication and store user data):
+--Firebase SDK (to handle user authentication and store user data):
 --Run the Following Commands on your Terminal
 	npm intall firebase
