@@ -44,10 +44,11 @@ export default function Pending() {
               ? filteredTask.map((task) => {
                   return (
                     <Card
-                      task={task}
-                      setOpacity={setOpacity}
-                      opacity={opacity}
-                    />
+                        task={task}
+                        setOpacity={setOpacity}
+                        opacity={opacity}
+                        key={i}
+                      />
                   );
                 })
               : task
@@ -58,6 +59,7 @@ export default function Pending() {
                         task={task}
                         setOpacity={setOpacity}
                         opacity={opacity}
+                        key={i}
                       />
                     );
                   })}

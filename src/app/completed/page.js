@@ -10,10 +10,10 @@ export default function Pending() {
   const [opacity, setOpacity] = useState("0");
   const [search, setSearch] = useState("");
   const [filteredTask, setFilteredTask] = useState([]);
-  
+
   const { task, isAuth } = useContext(AppContext);
   const router = useRouter();
-  
+
   useEffect(() => {
     {
       !isAuth && router.push("/signin");
@@ -41,24 +41,30 @@ export default function Pending() {
             <Search setSearch={setSearch} search={search} />
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
               {search.length > 0 && task
-                ? filteredTask.map((task) => {
+                ? filteredTask.map((task, i) => {
                     return (
-                      <Card
-                        task={task}
-                        setOpacity={setOpacity}
-                        opacity={opacity}
-                      />
-                    );
-                  })
-                : task
-                    .filter((task) => task.status == true)
-                    .map((task) => {
-                      return (
+                      <section key={i}>
                         <Card
                           task={task}
                           setOpacity={setOpacity}
                           opacity={opacity}
+                          id={i}
                         />
+                      </section>
+                    );
+                  })
+                : task
+                    .filter((task) => task.status == true)
+                    .map((task, i) => {
+                      return (
+                        <section key={i}>
+                        <Card
+                          task={task}
+                          setOpacity={setOpacity}
+                          opacity={opacity}
+                          id={i}
+                        />
+                      </section>
                       );
                     })}
             </div>

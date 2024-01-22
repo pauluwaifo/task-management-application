@@ -149,22 +149,28 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
               {search.length > 0 && task
-                ? filteredTask.map((task) => {
+                ? filteredTask.map((task, i) => {
                     return (
-                      <Card
-                        task={task}
-                        setOpacity={setOpacity}
-                        opacity={opacity}
-                      />
+                      <section key={i}>
+                        <Card
+                          task={task}
+                          setOpacity={setOpacity}
+                          opacity={opacity}
+                          id={i}
+                        />
+                      </section>
                     );
                   })
-                : task.map((task) => {
+                : task.map((task, i) => {
                     return (
-                      <Card
-                        task={task}
-                        setOpacity={setOpacity}
-                        opacity={opacity}
-                      />
+                      <section key={i}>
+                        <Card
+                          task={task}
+                          setOpacity={setOpacity}
+                          opacity={opacity}
+                          id={i}
+                        />
+                      </section>
                     );
                   })}
               <div className="flex items-center h-auto m-h-sm w-full justify-center border-2 border-dashed rounded-lg bg-white 

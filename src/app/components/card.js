@@ -4,7 +4,7 @@ import { useContext, useState } from "react";
 import AppContext from "../context/appContext";
 import Form from "./form";
 
-function Card({ task, opacity, setOpacity }) {
+function Card({ task, opacity, setOpacity, id }) {
   const { dispatch, setTitle, setPriority, setDescription, setDueDate } =
     useContext(AppContext);
   const [editTaskId, setEditTaskId] = useState(null);
@@ -25,7 +25,7 @@ function Card({ task, opacity, setOpacity }) {
         setEditTaskId={setEditTaskId}
       />
       {task ? (
-        <div className="w-auto h-auto w-full bg-white border border-gray-200 rounded-lg  dark:bg-gray-800 dark:border-gray-700">
+        <div key={id} className="w-auto h-auto w-full bg-white border border-gray-200 rounded-lg  dark:bg-gray-800 dark:border-gray-700">
           {/* TASK DELETE< STATUS< EDIT BUTTON */}
           <div className="flex justify-between px-4 dropdown pt-4 z-0">
             {task.createdAt && (

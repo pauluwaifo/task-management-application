@@ -40,24 +40,30 @@ export default function Medium() {
             <Search setSearch={setSearch} search={search} />
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
               {search.length > 0 && task
-                ? filteredTask.map((task) => {
+                ? filteredTask.map((task, i) => {
                     return (
-                      <Card
-                        task={task}
-                        setOpacity={setOpacity}
-                        opacity={opacity}
-                      />
-                    );
-                  })
-                : task
-                    .filter((task) => task.priority == "Low")
-                    .map((task) => {
-                      return (
+                      <section key={i}>
                         <Card
                           task={task}
                           setOpacity={setOpacity}
                           opacity={opacity}
+                          id={i}
                         />
+                      </section>
+                    );
+                  })
+                : task
+                    .filter((task) => task.priority == "Low")
+                    .map((task, i) => {
+                      return (
+                        <section key={i}>
+                        <Card
+                          task={task}
+                          setOpacity={setOpacity}
+                          opacity={opacity}
+                          id={i}
+                        />
+                      </section>
                       );
                     })}
             </div>
