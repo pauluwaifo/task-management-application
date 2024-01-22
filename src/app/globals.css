@@ -188,7 +188,7 @@ input[type="file"] {
 .m-h-sm {
   min-height: 12rem;
 }
-@media only screen and (max-width: 654px) {
+@media only screen and (max-width: 360px) {
   .form-container {
     width: 300px;
     height: 580px;
