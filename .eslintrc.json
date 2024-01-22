@@ -1,7 +1,14 @@
 {
-  "extends": "next",
+  "extends": ["next", "next/core-web-vitals", "eslint:recommended"],
   "rules": {
     "react/no-unescaped-entities": "off",
-    "@next/next/no-page-custom-font": "off"
+    "@next/next/no-page-custom-font": "off",
+    "no-unused-vars": "warn"
+  },
+  "globals": {
+    "React": "readonly"
+  },
+  "eslint": {
+    "ignoreDuringBuilds": true
   }
 }

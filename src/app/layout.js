@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import GLobalState from "./context/globalState";
 import Nav from "./components/nav";
-import RequiredAuth from "./requiredAuth/requiredAuth"
+import RequiredAuth from "./requiredAuth/requiredAuth";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,15 +14,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-      </head>
       <GLobalState>
-        <body className={inter.className}>
-          <Nav />
         <RequiredAuth>
-          <main>{children}</main>
+          <Nav />
+          <body className={inter.className}>
+            <main>{children}</main>
+          </body>
         </RequiredAuth>
-        </body>
       </GLobalState>
     </html>
   );

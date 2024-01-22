@@ -28,17 +28,20 @@ function GlobalState(props) {
   const [dueDate, setDueDate] = useState("");
   const [priority, setPriority] = useState("");
   const [userCredentials, setUserCredentials] = useState([]);
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
 
-  const createdAt = formattedDateTime
-  const status = false
-
+  const createdAt = formattedDateTime;
+  const status = false;
 
   useEffect(() => {
-    localStorage.setItem("user", JSON.stringify(authState.currentUser));
+    if (typeof window !== "undefined" && window.localStorage) {
+      localStorage.setItem("user", JSON.stringify(authState.currentUser));
+    }
   }, [authState.currentUser]);
   useEffect(() => {
-    localStorage.setItem("task", JSON.stringify(state.task));
+    if (typeof window !== "undefined" && window.localStorage) {
+      localStorage.setItem("task", JSON.stringify(state.task));
+    }
   }, [state.task]);
 
   return (
