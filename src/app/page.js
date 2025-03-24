@@ -65,11 +65,11 @@ export default function Home() {
   return (
     <>
       {isAuth && isAuth ? (
-        <div className="p-4 sm:ml-64 v-h120 overscroll-contain">
+        <div className="p-4 sm:ml-64 v-h120 overscroll-contain bg-white">
           {/* create task form */}
           <Form opacity={opacity} setOpacity={setOpacity} />
           {/* BODY */}
-          <div className="p-4 m-bg-white v-h110 border-2 border-dashed rounded-lg dark:border-gray-700 mt-14">
+          <div className="p-4 bg-white v-h110 border-2 border-dashed rounded-lg dark:border-gray-700 mt-14">
             {/* Rows / Cols */}
             {/* Search, User Info */}
             <Search setSearch={setSearch} search={search} />
