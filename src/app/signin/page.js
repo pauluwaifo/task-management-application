@@ -72,7 +72,7 @@ function SignIn() {
         {/* Password */}
         <label className="block">Password</label>
         <input
-          className="m-3 p-3 border"
+          className="m-3 p-3 border text-black"
           type="password"
           placeholder="Password.."
           value={password}
