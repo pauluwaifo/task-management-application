@@ -161,7 +161,7 @@ function SignUp() {
           <option value="female">Female</option>
         </select>
         {/* Email */}
-        <label className="block">Email</label>
+        <label className="block text">Email</label>
         <input
           required
           className="m-3 p-3 border text-black"
