@@ -53,7 +53,7 @@ function SignIn() {
             className="inline-block "
             alt="TeachMateLogo"
           />
-          <h3 className="text-center ms-3 inline-block fs-xl font-medium">
+          <h3 className="text-center ms-3 inline-block fs-xl font-medium text-black">
             TeachMateAI
           </h3>
         </div>
@@ -61,7 +61,7 @@ function SignIn() {
         {/* Email */}
         <label className="block">Email</label>
         <input
-          className="m-3 p-3 border"
+          className="m-3 p-3 border text-black"
           type="email"
           placeholder="Email..."
           value={email}
