@@ -100,7 +100,7 @@ function SignUp() {
             className="inline-block "
             alt="TeachMateLogo"
           />
-          <h3 className="text-center ms-3 inline-block fs-xl font-medium">
+          <h3 className="text-black text-center ms-3 inline-block fs-xl font-medium">
             TeachMateAI
           </h3>
         </div>
@@ -138,7 +138,7 @@ function SignUp() {
         <label className="block">Name</label>
         <input
           required
-          className="m-3 p-3 border"
+          className="m-3 p-3 border text-black"
           type="text"
           placeholder="Enter name..."
           value={name}
@@ -150,7 +150,7 @@ function SignUp() {
         <label>Gender</label>
         <select
           required
-          className="m-3 p-3 border"
+          className="m-3 p-3 border text-black"
           onChange={(e) => setGender(e.target.value)}
           value={gender}
         >
@@ -164,7 +164,7 @@ function SignUp() {
         <label className="block">Email</label>
         <input
           required
-          className="m-3 p-3 border"
+          className="m-3 p-3 border text-black"
           type="email"
           placeholder="Enter email..."
           value={email}
@@ -176,7 +176,7 @@ function SignUp() {
         <label className="block">Password</label>
         <input
           required
-          className="m-3 p-3 border"
+          className="m-3 p-3 border text-black"
           type="password"
           placeholder="Enter password.."
           value={password}
