@@ -42,6 +42,7 @@
 textarea,
 select {
   width: 450px;
+  color: black !important;
 }
 .form-container textarea {
   min-height: 150px;
